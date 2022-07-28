@@ -1,4 +1,4 @@
-import router, { useRouter } from 'next/router';
+import { useRouter } from 'next/router';
 
 import Card from '../ui/Card';
 import classes from './MeetupItem.module.css';
@@ -9,6 +9,7 @@ function MeetupItem(props) {
   function showDetailsHandler() {
     router.push('/' + props.id);
   }
+
   return (
     <li className={classes.item}>
       <Card>

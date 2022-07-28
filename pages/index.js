@@ -14,7 +14,7 @@ function HomePage(props) {
           content='Browse a huge list of highly active React meetups!'
         />
       </Head>
-      <MeetupList meetups={props.meetups} />
+      <MeetupList meetups={props.meetups} />;
     </Fragment>
   );
 }
@@ -27,8 +27,8 @@ function HomePage(props) {
 
 //   return {
 //     props: {
-//       meetups: DUMMY_MEETUPS,
-//     },
+//       meetups: DUMMY_MEETUPS
+//     }
 //   };
 // }
 
@@ -54,6 +54,7 @@ export async function getStaticProps() {
         id: meetup._id.toString(),
       })),
     },
+    revalidate: 1,
   };
 }
 
